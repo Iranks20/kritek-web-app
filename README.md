@@ -1,70 +1,73 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Redux CRUD Application
 
-## Available Scripts
+This is a simple CRUD (Create, Read, Update, Delete) application built with ReactJS, Redux Toolkit, and JSON Server.
 
-In the project directory, you can run:
+## Project Setup
 
-### `npm start`
+1. Clone the repository or download the source code.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Install the necessary dependencies by running the following command in the project root directory:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   ```bash
+   npm install
+   ```
 
-### `npm test`
+3. Start the JSON Server for the backend by running the following command in a separate terminal window:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   json-server --watch db.json --port 3001
+   ```
 
-### `npm run build`
+4. Start the React development server by running the following command in the project root directory:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. Open your browser and visit `http://localhost:3000` to see the application in action.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Structure
 
-### `npm run eject`
+- `src/api.js`: Contains functions to interact with the JSON Server API.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `src/features/todosSlice.js`: Defines the Redux slice for todos, including actions and reducers.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `src/components/TodoList.js`: Renders the list of todos and handles delete functionality.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `src/components/AddTodoForm.js`: Renders the form to add new todos.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `src/App.js`: Main component that renders the TodoList and AddTodoForm components.
 
-## Learn More
+- `src/index.js`: Entry point of the application where the Redux store is configured.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Display a list of todos fetched from the JSON Server backend.
 
-### Code Splitting
+- Add new todos by submitting the AddTodoForm.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Delete todos by clicking the delete button in the TodoList.
 
-### Analyzing the Bundle Size
+- Updates to the todos are synchronized with the JSON Server backend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Dependencies
 
-### Making a Progressive Web App
+The project uses the following dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- `redux`: State management library for JavaScript applications.
 
-### Advanced Configuration
+- `react-redux`: Official React bindings for Redux.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- `@reduxjs/toolkit`: Redux Toolkit library for efficient Redux development.
 
-### Deployment
+- `axios`: Promise-based HTTP client for making API requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- `json-server`: A full-fledged JSON API server for development purposes.
 
-### `npm run build` fails to minify
+## Customize
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can customize the project by modifying the components, styles, and functionalities according to your requirements. Feel free to explore and enhance the application as needed.
+
+
+
